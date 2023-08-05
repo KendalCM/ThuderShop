@@ -1,0 +1,31 @@
+package com.thundershop.service;
+
+import com.thundershop.domain.Producto;
+import java.util.List;
+
+public interface ProductoService {
+    
+    // Se obtiene un listado de productos en un List
+    public List<Producto> getProductos(boolean activos);
+    
+   // Se obtiene un Producto, a partir del id de un producto
+    public Producto getProducto(Producto producto);
+    
+    // Se inserta un nuevo producto si el id del producto esta vacío
+    // Se actualiza un producto si el id del producto NO esta vacío
+    public void save(Producto producto);
+    
+    // Se elimina el producto que tiene el id pasado por parámetro
+    public void delete(Producto producto);
+    
+    //Ejemplo de un metodo que hace una consulta ampliada de JPA
+    public List<Producto>consultaAmpliada(double precioI, double precioS);
+    
+    //Ejemplo de un metodo que hace una consulta ampliada de JPQL
+    public List<Producto>consultaJPQL(double precioI, double precioS);
+    
+    //Ejemplo de un metodo que hace una consulta ampliada de SQL
+    public List<Producto>consultaSQL(double precioI, double precioS);
+    
+    
+}
