@@ -39,7 +39,7 @@
                               method="POST" class="was-validated" enctype="multipart/form-data">
                             <div class="modal-body">
                                 <div class="mb-3">
-                                    <label for="idCategoria">[[#{categoria}]]</label>
+                                    <label for="idCategoria">[[#{producto.categoria}]]</label>
                                     <select name="categoria.idCategoria"
                                             class="form-select"
                                             aria-label="Default select example">
@@ -165,7 +165,7 @@
                                                     <label for="idCategoria">[[#{producto.categoria}]]</label>
                                                     <select name="categoria.idCategoria"
                                                             class="form-select"
-                                                            th:field="*{categoria.idCategori}"
+                                                            th:field="*{categoria.idCategoria}"
                                                             aria-label="Default select example"
                                                             >
                                                         <option th:each="c : ${categorias}"

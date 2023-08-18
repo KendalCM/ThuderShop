@@ -28,11 +28,10 @@
                                    data-bs-toggle="dropdown" 
                                    href="#" 
                                    role="button" 
-                                   aria-expanded="false">[[#{plantilla.pruebas}]]</a>
+                                   aria-expanded="false">[[#{plantilla.otros}]]</a>
                                 <ul class="dropdown-menu dropdown-menu-dark" sec:authorize="hasRole('ROLE_ADMIN')">
                                     <li><a class="dropdown-item"  th:href="@{/usuario/listado}">[[#{plantilla.usuarios}]]</a></li>
-                                    <li><a class="dropdown-item"  th:href="@{/pruebas/listado}">[[#{plantilla.asociaciones}]]</a></li>
-                                    <li><a class="dropdown-item"  th:href="@{/pruebas/listado2}">[[#{plantilla.consultas}]]</a></li>
+                                    <li><a class="dropdown-item"  th:href="@{/reportes/principal}">[[#{plantilla.consultas}]]</a></li>
                                 </ul>
                             </li>
                         </ul>
