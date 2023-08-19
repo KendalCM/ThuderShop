@@ -14,9 +14,9 @@
                     <h3 class = "inline text-center">[[#{index.nuestrosProductos}]]</h3>
                     <div id="resultsBlock"></div>
                 </div>
-                <div class="row row-cols-3" 
+                <div class="row row-cols-4" 
                      th:if="${productos != null and !productos.empty}">
-                    <div class="card" th:each="producto : ${productos}">
+                    <div class="card" style="margin: 8px" th:each="producto : ${productos}">
                         <div class="card-body">
                             <h5 class="card-title">[[${producto.descripcion}]]</h5>
                             <figure>

@@ -1,5 +1,6 @@
 package com.thundershop.controller;
 
+import com.thundershop.domain.Categoria;
 import com.thundershop.domain.Item;
 import com.thundershop.domain.Producto;
 import com.thundershop.service.CategoriaService;
@@ -31,7 +32,6 @@ public class CarritoController {
     
    @Autowired
     private ItemService itemService;
-
 
     //Para Agregar un producto al carrito
     @GetMapping("/carrito/agregar/{idProducto}")
