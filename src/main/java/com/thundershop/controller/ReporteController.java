@@ -23,14 +23,14 @@ public class ReporteController {
         
         return "/reportes/principal";
     }
-    @GetMapping("/usuarios")
+    @GetMapping("/usuariosp")
     public ResponseEntity<Resource> ReporteUsuarios(@RequestParam String tipo) throws IOException{
-        var reporte="usuarios";
+        var reporte="usuariosp";
         return reporteService.generaReporte(reporte,null,tipo);
     }
-    @GetMapping("/ventas")
+    @GetMapping("/ventasp")
     public ResponseEntity<Resource> ReporteVentas(@RequestParam String tipo) throws IOException{
-        var reporte="ventas";
+        var reporte="ventasp";
         return reporteService.generaReporte(reporte,null,tipo);
     }
 }
