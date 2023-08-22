@@ -30,6 +30,16 @@ public class CarritoController {
         return "index";
     }
     
+    @GetMapping("/{idCategoria}")
+    public String listado(Model model, Categoria categoria) {
+        var productos = categoriaService.getCategoria(categoria).getProductos();
+        model.addAttribute("productos", productos);
+        var categorias = categoriaService.getCategorias(false);
+        model.addAttribute("categorias",categorias);
+        model.addAttribute("totalProductos",productos.size());
+        return "index";
+    }
+    
    @Autowired
     private ItemService itemService;
 
