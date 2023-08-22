@@ -8,13 +8,13 @@
     <body>
         <header th:replace="~{layout/plantilla :: header}"/>
 
-        <div class="container">
-            <div class="row row-cols-6" >
+        <div class="container py-4">
+            <div class="row row-cols-6 py-4" >
                 <a th:href="@{/carrito/listado}" class="btn btn-primary">
                     <i class='fas fa-reply'></i> [[#{accion.regresar}]]</a>
             </div>
             <div class="row row-cols-2">
-                <div class="card">
+                <div class="card py-4">
                     <div class="card-header">[[#{carrito.datos}]]</div>
                     <div class="card-body">
                         <h5 class="card-title">[[${item.descripcion}]]</h5>

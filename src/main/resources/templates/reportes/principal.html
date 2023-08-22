@@ -7,14 +7,14 @@
     <body>
         <header th:replace="~{layout/plantilla :: header}"></header>
 
-        <div class ="container">
+        <div class ="container py-4">
             <div class = "row"></div>
             <div class = "row row-cols-6">
                 <a th:href="@{/}" class="btn btn-primary">
                     <i class="fas fa-arrow-left"></i> [[#{accion.regresar}]]
                 </a>
             </div>
-            <div class = "row row-cols-6">
+            <div class = "row row-cols-6 py-4">
                 <div class = "col-md-4">
                     <div class = "card">
                         <div class="card-header text-center">
@@ -52,6 +52,27 @@
                                 <i class="fas fa-eye"></i><i class="fas fa-file-excel"></i>
                             </a>
                             <a th:href="@{/reportes/ventas?tipo=Csv}" class="btn btn-primary">
+                                <i class="fas fa-eye"></i><i class="fas fa-file-csv"></i>
+                            </a>  
+                        </div>
+                    </div>
+                </div>
+                <div class = "col-md-4">
+                    <div class = "card">
+                        <div class="card-header text-center">
+                            Reporte Productos
+                        </div>
+                        <div class = "card-body">
+                            <a th:href="@{/reportes/Productos?tipo=vPdf}" class="btn btn-primary">
+                                <i class="fas fa-eye"></i><i class="fas fa-file-pdf"></i>
+                            </a>
+                            <a th:href="@{/reportes/Productos?tipo=Pdf}" class="btn btn-success">
+                                <i class="fas fa-download"></i><i class="fas fa-file-pdf"></i>
+                            </a>
+                            <a th:href="@{/reportes/Productos?tipo=Xls}" class="btn btn-primary">
+                                <i class="fas fa-eye"></i><i class="fas fa-file-excel"></i>
+                            </a>
+                            <a th:href="@{/reportes/Productos?tipo=Csv}" class="btn btn-primary">
                                 <i class="fas fa-eye"></i><i class="fas fa-file-csv"></i>
                             </a>  
                         </div>

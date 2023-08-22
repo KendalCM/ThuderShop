@@ -55,7 +55,7 @@
         </div>  
         <!-- Fragmento para ver los productos-->
         <section th:fragment="listadoCarrito" id="items">
-            <div class="container">
+            <div class="container py-4">
                 <div class="row">
                     <div class="col-md-9">
                         <div class="card">
@@ -68,6 +68,7 @@
                                         <tr>
                                             <th>#</th>
                                             <th>[[#{producto.descripcion}]]</th>
+                                            <th>[[#{producto.detalle}]]</th>
                                             <th>[[#{producto.precio}]]</th>
                                             <th>[[#{carrito.cantidad}]]</th>
                                             <th>[[#{carrito.total}]]</th>
@@ -79,6 +80,7 @@
                                         <tr th:each="item, contador : ${items}">
                                             <td>[[${contador.count}]]</td>
                                             <td>[[${item.descripcion}]]</td>
+                                            <td>[[${item.detalle}]]</td>
                                             <td class="text-end">[[${item.precio}]]</td>
                                             <td class="text-center">[[${item.cantidad}]]</td>
                                             <td class="text-center">[[${item.cantidad*item.precio}]]</td>
